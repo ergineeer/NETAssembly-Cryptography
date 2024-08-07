@@ -1,8 +1,7 @@
 % Initialization
 cd(fileparts(matlab.desktop.editor.getActiveFilename))
-clear
-clc
-rng(90) 
+clear; clc;
+rng(90);
 
 
 %% Method 1 - java.security.MessageDigest.getInstance()
@@ -23,7 +22,42 @@ hashBytes_2 = uint8(sha256.ComputeHash(imgBytes));
 
 sha256hash_2 = '';
 for i = 1:length(hashBytes_2)
+
+%% Method 3 - System.Security.Cryptography.HashAlgorithm.Create()
+NET.addAssembly('System.Security');
+imagePath = 'ngc6543a.jpg';
+img = imread(imagePath);
+imgBytes = uint8(img(:));
+% As hashing algorithm, you can use any of the following along with SHA256
+% 'SHA1' | 'SHA384' | 'SHA512' | 'MD5'
+algorithm = 'SHA256';
+hasher = System.Security.Cryptography.HashAlgorithm.Create(algorithm);
+hashBytes_3 = uint8(hasher.ComputeHash(imgBytes));
+
+hashStr = '';
+for i = 1:length(hashBytes_3)
+    hashStr = strcat(hashStr, lower(dec2hex(hashBytes_3(i), 2)));
+end
+disp(['Hash: ', hashStr]);
+
     sha256hash_2 = strcat(sha256hash_2, lower(dec2hex(hashBytes_2(i), 2)));
 end
 disp(['Hash: ', sha256hash_2]);
+
+%% Method 3 - System.Security.Cryptography.HashAlgorithm.Create()
+NET.addAssembly('System.Security');
+imagePath = 'ngc6543a.jpg';
+img = imread(imagePath);
+imgBytes = uint8(img(:));
+% As hashing algorithm, you can use any of the following along with SHA256
+% 'SHA1' | 'SHA384' | 'SHA512' | 'MD5'
+algorithm = 'SHA256';
+hasher = System.Security.Cryptography.HashAlgorithm.Create(algorithm);
+hashBytes_3 = uint8(hasher.ComputeHash(imgBytes));
+
+hashStr = '';
+for i = 1:length(hashBytes_3)
+    hashStr = strcat(hashStr, lower(dec2hex(hashBytes_3(i), 2)));
+end
+disp(['Hash: ', hashStr]);
 
