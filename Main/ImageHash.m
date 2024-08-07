@@ -45,10 +45,6 @@ for i = 1:length(hashBytes_3)
 end
 disp(['Hash: ', hashStr]);
 
-    sha256hash_2 = strcat(sha256hash_2, lower(dec2hex(hashBytes_2(i), 2)));
-end
-disp(['Hash: ', sha256hash_2]);
-
 
 %% Method Comparison
 if strcmp(sha256hash_1, sha256hash_2) && strcmp(sha256hash_2, hashStr)
