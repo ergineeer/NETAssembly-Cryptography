@@ -23,6 +23,9 @@ hashBytes_2 = uint8(sha256.ComputeHash(imgBytes));
 
 sha256hash_2 = '';
 for i = 1:length(hashBytes_2)
+    sha256hash_2 = strcat(sha256hash_2, lower(dec2hex(hashBytes_2(i), 2)));
+end
+disp(['Hash: ', sha256hash_2]);
 
 
 %% Method 3 - System.Security.Cryptography.HashAlgorithm.Create()
