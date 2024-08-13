@@ -13,3 +13,8 @@ rng(90);
 import System.Security.Cryptography.*
 password = 'RandomPassword';
 salt = System.Text.Encoding.UTF8.GetBytes('random_salt');
+passwordBytes = System.Text.Encoding.UTF8.GetBytes(password);
+pbkdf2 = Rfc2898DeriveBytes(passwordBytes, salt, 10000); % 10000 iterations
+derivedKey = pbkdf2.GetBytes(32);
+derivedKeyBase64 = System.Convert.ToBase64String(derivedKey);
+fprintf("Derived Key: %s", char(derivedKeyBase64))
