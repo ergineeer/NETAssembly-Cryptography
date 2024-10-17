@@ -1,8 +1,13 @@
+% % % % % 
+% Rivest-Shamir-Adleman (RSA)
+% Ergin Sezgin
+% 13/08/2024
+% 
+
 % Initialization
-cd(fileparts(matlab.desktop.editor.getActiveFilename))
-clear
-clc
-rng(90)
+cd(fileparts(matlab.desktop.editor.getActiveFilename));
+clear; clc;
+rng(90);
 
 NET.addAssembly('System.Security');
 rsa = System.Security.Cryptography.RSACryptoServiceProvider();
