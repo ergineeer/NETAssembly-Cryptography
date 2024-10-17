@@ -4,9 +4,9 @@ This repository provides implementation of cryptographic algorithms in MATLAB, u
 Python implementation of the aforementioned algoritmhs is also provided within the repository, making it flexible for users of both environments.
 
 ## Features
-1. AES (Advanced Encryption Standard): Symmetric key encryption algorithm for secure data encryption and decryption
-2. RSA (Rivest-Shamir-Adleman): Asymmetric key encryption algorithm
-3. SHA (Secure Hash Algorithms): Cryptographic hash functions (SHA1, SHA256, SHA384, SHA512, MD5)
+1. Advanced Encryption Standard (AES): Symmetric key encryption algorithm for secure data encryption and decryption
+2. Rivest-Shamir-Adleman (RSA): Asymmetric key encryption algorithm
+3. Secure Hash Algorithms (SHA): Cryptographic hash functions (SHA1, SHA256, SHA384, SHA512, MD5)
 4. Elliptic Curve Diffie-Hellman (ECDH) Key Exchange: A key agreement protocol that allows two parties to establish a shared secret over an insecure channel
 5. Password-Based Encryption (PBE) with PBKDF2: A method of creating strong cryptographic keys using a user-provided password  
 
