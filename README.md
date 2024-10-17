@@ -13,5 +13,6 @@ Python implementation of the aforementioned algoritmhs is also provided within t
 ## Use Cases
 1. Data Encryption: Encrypt sensitive data
 2. Secure Communication: Use RSA and ECDH to establish secure key exchanges over an untrusted network
-3. Password Hashing: Use SHA algorithms to create secure hashes for storage
+3. Password Hashing: Use SHA algorithms to create secure hashes for storage  
 
+Thank you for checking out this repository. I hope you find it useful and educational. Feel free to contribute.
